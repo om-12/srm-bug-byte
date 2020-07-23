@@ -5,6 +5,7 @@ from django.http import HttpResponse
 from django.contrib.auth.models import User, auth
 from django.contrib.sessions.models import Session
 from django.contrib.auth.decorators import login_required
+from django.core.mail import send_mail
 def index(request):
     return render(request,'index.html');
 
@@ -18,6 +19,8 @@ def login(request) :
          if user is not None :
              request.session['member_id'] = user.id
              auth.login(request,user)
+             send_mail('hello from donate for defenders','Hello there this is an automated message that you have succesfully signed in to our website',
+             'omkantmishra21@gmail.com',[user.email],fail_silently=False)
              return redirect('/')
          else :
              messages.info(request,'invalid credentials')
