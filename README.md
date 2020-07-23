@@ -1,7 +1,7 @@
 # srm-bug-byte
 srm developing challenge
 
-HELLO Sirs/Mesdames
+HELLO Sirs/Ma'ams
 Firstly i would like to apologize for changing the project's idea because my one prominent member of my team has left because of some of his family problems.
 He was key to the project,We hope you will understand our problem and let us allow to be one of the competeting teams in this challenge.
 
