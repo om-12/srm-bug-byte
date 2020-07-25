@@ -30,3 +30,21 @@ WHY THIS IDEA?
 
 BUGS WE ARE FACING
 facebook registeration because facebook had changed their security settings for http including domains.
+
+
+
+
+
+
+
+HELP  TO UNDERSTAND THE WEBSITE
+
+HOMEPAGE - this page consist of navigations to all other contents of site and contains donate now button after motivating by the images.
+NEWS- it will contain the data which is recent and related to our website works and current affairs in indian army organisation.
+events-it will contain the type of events we can arrange for fundraising.
+participation-initially we thought that we could complete this part of project but we are only able to complete the front end
+our site supports a good user login register page.
+we had tried to get the feed backs of user to let us know what changes we need to do.
+we have designed the model but we need to do alot because it is a dynamic site as you can understand.
+we have tried for payment gateways too but we did not succeed because late we came to know that we need mcc.
+THANKYOU
