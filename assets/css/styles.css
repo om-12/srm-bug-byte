@@ -3,12 +3,16 @@ nav{
     margin: 0;
 }
 
-body{
-    background-image: linear-gradient(rgba(255, 255, 255, 0.274), rgba(255, 255, 255, 0.39)), url('https://upload.wikimedia.org/wikipedia/commons/1/17/Ashoka_Chakra.svg');
+img{
+    overflow: hidden;
+}
+
+/* body{
+    background-image: linear-gradient(rgba(255, 255, 255, 0.548), rgba(255, 255, 255, 0.623)), url('https://upload.wikimedia.org/wikipedia/commons/1/17/Ashoka_Chakra.svg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-}
+} */
 
 /* navbar */
 .navbar{
@@ -16,6 +20,7 @@ body{
     top: 0;
     overflow: hidden;
     width: 100%;
+    z-index: 2;
 }
 
 .navbar-brand, .nav-link{
@@ -27,20 +32,31 @@ body{
     color: #000080;
 }
 
-.guideline-bg {
-    padding: 10px;
-   
+/* start */
+.start{
+    padding: 7% 7%;
+
 }
 
-/* about */
-.about{
-    background-color: aliceblue;
+.start .card{
+    padding: 2rem 1rem 0;
+}
+
+.ashok{
     text-align: center;
-    padding: 7% 15%;
 }
 
+/* guidelines */
+.guidelines{
+    padding: 7% 15%;
+    color: #138808;
+}
 
-
+/* carousel */
+.carousel-inner> .carousel-item> img{
+    height: 500px;
+    width: 100%;
+}
 
 /* footer */
 .footer{
@@ -62,4 +78,26 @@ h3{
 .footer-icon:hover{
     color: #000080;
     transform: scale(1.5);
+}
+
+.btn-outline-success {
+    background-color: #fff;
+  }
+
+
+.join-div, .join-div2{
+    padding: 3% 15% 1% 15%;
+    text-align: center;
+}
+
+.alerts-box{
+    background-color: #FF9933;
+}
+
+.text1{
+    border-radius: 0;
+}
+
+.btn1{
+    border-radius: 0;
 }

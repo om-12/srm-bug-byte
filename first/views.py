@@ -1,14 +1,17 @@
-
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from django.http import HttpResponse
+
 from django.contrib.auth.models import User, auth
 from django.contrib.sessions.models import Session
 from django.contrib.auth.decorators import login_required
 from django.core.mail import send_mail
-def index(request):
-    return render(request,'index.html');
+from .models import Donate
+from first.models import Feedback
 
+def index(request):
+  
+    return render(request,'index.html');
 
 def login(request) :
      if request.method == 'POST' :
@@ -19,8 +22,6 @@ def login(request) :
          if user is not None :
              request.session['member_id'] = user.id
              auth.login(request,user)
-             send_mail('hello from donate for defenders','Hello there this is an automated message that you have succesfully signed in to our website',
-             'omkantmishra21@gmail.com',[user.email],fail_silently=False)
              return redirect('/')
          else :
              messages.info(request,'invalid credentials')
@@ -57,7 +58,7 @@ def register(request):
             else :
                 user =User.objects.create_user(username=username,email=email,password=password1)
                 # by writing this only we are hitting the database to store the information
-                user.save();
+                user.save()
                 print('user created')
                 return redirect('login') 
         else :
@@ -65,8 +66,49 @@ def register(request):
             return redirect('register')
         return('/')  
     else :
-        return render(request,'reg.html');
+        return render(request,'reg.html')
 
 
 def donate(request):
-    return render(request,'form.html');
+    if request.method=='POST':
+        fname = request.POST['fname']
+        lname = request.POST['lname']
+        organization= request.POST['organization']
+        email = request.POST['email']
+        phonenumber= request.POST['phonenumber']
+        address1 = request.POST['address1']
+        address2 = request.POST['address2']
+        city=request.POST['city']
+        state=request.POST['state']
+        amount=request.POST['amount']
+        comments=request.POST['comments']
+        donation = Donate(fname=fname,lname=lname,organization=organization,email=email,phonenumber=phonenumber,address1=address1,address2=address2,city=city,state=state,amount=amount,comments=comments)
+        donation.save()
+    return render(request,"form.html")
+
+# this function booking is to connect our app first to the file about.html
+def about(request) :
+    return render(request,"about.html")  
+
+def news(request) :
+    return render(request,"newsAndParticipate.html")  
+
+# by writing we are applying the condition that if user is logged in then only call feedback function
+@login_required(login_url='login')
+def feedback(request) :
+    name = request.POST['name']
+    email = request.POST['email']
+    subject = request.POST['subject']
+    message = request.POST['message']
+    feed = Feedback(name=name,email=email,subject=subject,message=message)
+    # by writing this only we are hitting the database to store the information
+    feed.save() 
+    return redirect('index')
+
+
+def participate(request):
+    return render(request,'participate.html')
+
+
+def events(request):
+    return render(request,'events.html')

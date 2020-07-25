@@ -1,10 +1,11 @@
 nav{
     background-color: #FF9933;
     margin: 0;
+    z-index: 2;
 }
 
 body{
-    background-image: linear-gradient(rgba(255, 255, 255, 0.274), rgba(255, 255, 255, 0.39)), url('https://upload.wikimedia.org/wikipedia/commons/1/17/Ashoka_Chakra.svg');
+    /* background-image: linear-gradient(rgba(255, 255, 255, 0.274), rgba(255, 255, 255, 0.39)), url('https://upload.wikimedia.org/wikipedia/commons/1/17/Ashoka_Chakra.svg'); */
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -74,4 +75,53 @@ h3{
   content: "";
   display: table;
   clear: both;
+}
+
+/* .row {
+    padding: 7% 15%;
+} */
+
+.column{
+    width: 100%;
+}
+
+.mt-5{
+    width: 100%;
+}
+
+.right{
+    padding: 0 5%;
+    right: auto;
+}
+
+.left{
+    padding: 0 3%;
+    width: 15rem;
+}
+
+.textLine, .donationAmountTextLine{
+    padding-left: 1rem;
+}
+
+.fieldLabel, .fieldItem{
+    padding: 2px 2rem;
+}
+
+.typeText{
+    margin-left: 1rem;
+}
+
+.fieldLabel{
+    margin-top: 0;
+    padding: 0;
+}
+
+.col-sm-12{
+    z-index: 0;
+}
+
+.btn1{
+    margin-left: 34%;
+    margin-top: 4rem;
+    width: 33%;
 }

@@ -1,0 +1,170 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- bootstrap css -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        
+        <!-- my css -->
+        <link rel="stylesheet" href="{% static 'css/events.css' %}">
+
+        <!-- fontawesome -->
+        <script src="https://kit.fontawesome.com/82d4e6f3ab.js" crossorigin="anonymous"></script>
+        
+        <title>Donate for Defenders</title>
+    </head>
+    <body>
+        <section id="nav">
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" href="#"><strong>Donate for Defenders</strong></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="about">About <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="events">Events <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="news">News <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Member <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="participate">Participate <span class="sr-only">(current)</span></a>
+                    </li>
+                    {% if  user.is_authenticated %}
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/">Hello! {{user}}<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="logout">Logout<span class="sr-only">(current)</span></a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item active">
+                        <a class="nav-link" href="register">Register<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="login">Login<span class="sr-only">(current)</span></a>
+                    </li>
+                    {% endif %}
+                </ul>
+                </div>
+            </nav>
+            <br><br>
+        </section>
+
+        <section id="Events">
+            <div class="heading-box" style="background-color: rgb(251, 223, 170);padding: 1.5rem 7% 0.1rem;"><p style="font-size: 2rem;">Fundraising Events</p></div>
+            <div class="events">
+                <div class="row">
+                    <div class="eb1 col-lg-6">
+                        <img src="https://gumlet.assettype.com/nationalherald/2018-12/9feba577-654b-4724-a9f0-aec1101fd682/bjp_begs_for_money_in_indian_armys_name.jpg?w=1200&h=667" alt="">
+                    </div>
+                    <div class="eb2 col-lg-6">
+                        <h2>MyEvent is the one stop shop for all Fundraising Events.</h2><br>
+                        <p>With a MyEvent Website you can provide online registration with or without payment, online donations and provide participants with their own fundraising page and team fundraising pages.</p>
+                        <a href="" class="btn btn-warning btn-lg">Start Now - It's Free</a>
+                    </div>
+                </div><br><br>
+                <hr>
+                <div class="row example-box" style="padding: 2rem 0;">
+                    <div class="col-sm-12" style="margin: 0 0 2rem;"><h2>Some examples of Fundraising Events</h2></div>
+                    <div class="col-sm-4">
+                        <ul>
+                            <li>Dance Night</li>
+                            <li>Dance Night</li>
+                            <li>Dance Night</li>
+                            <li>Dance Night</li>
+                            <li>Dance Night</li>
+                            <li>Dance Night</li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4">
+                        <ul>
+                            <li>Dance Night</li>
+                            <li>Dance Night</li>
+                            <li>Dance Night</li>
+                            <li>Dance Night</li>
+                            <li>Dance Night</li>
+                            <li>Dance Night</li>
+                        </ul>                        
+                    </div>
+                    <div class="col-sm-4">
+                        <ul>
+                            <li>Dance Night</li>
+                            <li>Dance Night</li>
+                            <li>Dance Night</li>
+                            <li>Dance Night</li>
+                            <li>Dance Night</li>
+                            <li>Dance Night</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <div class='explain' style="margin-top: 4rem;">
+                    <div class="col-lg-8" ><h2>Dance Night</h2><br>
+                        <p>This is a fun and great way to showcase local talent while raising money for a charity or cause at the same time. Choosing a location, such as a restaurant or bar that usually has live music, is a good option seeing as all the equipment is already there. The venue chosen will have food and drinks, so no need to worry about catering the event. Try and find an owner that has an attachment or sympathizes with your cause so they will either donate or charge a reduced fee for renting, food and beverages. Just as with the movie or karaoke night fundraiser, it is a good idea to choose a quiet night so that they will be more motivated to help you raise money for your charity. Seeing as you are providing the bar or restaurant with a lot of business, part of the proceeds from food and beverages purchased can go to support the cause. With a free MyEvent.com website, bands can easily register to perform online. Guests will be able to learn about the performing bands and purchase their Battle of the Bands Fundraising fundraiser tickets online from the same free website. You can sell tickets online in advance, or charge more at the door, where all proceeds are donated to the cause. Promoting through YouTube and Facebook is a great way to build awareness about the fundraising event. The winning band will win a prize. Sponsorships opportunities and packages can also be featured and purchased on your free MyEvent.com website.</p>
+                        <a href="" style="float: right;">Go on top</a>
+                    </div><br><br><br>
+
+                    <div class="col-lg-8" ><h2>Dance Night</h2><br>
+                        <p>This is a fun and great way to showcase local talent while raising money for a charity or cause at the same time. Choosing a location, such as a restaurant or bar that usually has live music, is a good option seeing as all the equipment is already there. The venue chosen will have food and drinks, so no need to worry about catering the event. Try and find an owner that has an attachment or sympathizes with your cause so they will either donate or charge a reduced fee for renting, food and beverages. Just as with the movie or karaoke night fundraiser, it is a good idea to choose a quiet night so that they will be more motivated to help you raise money for your charity. Seeing as you are providing the bar or restaurant with a lot of business, part of the proceeds from food and beverages purchased can go to support the cause. With a free MyEvent.com website, bands can easily register to perform online. Guests will be able to learn about the performing bands and purchase their Battle of the Bands Fundraising fundraiser tickets online from the same free website. You can sell tickets online in advance, or charge more at the door, where all proceeds are donated to the cause. Promoting through YouTube and Facebook is a great way to build awareness about the fundraising event. The winning band will win a prize. Sponsorships opportunities and packages can also be featured and purchased on your free MyEvent.com website.</p>
+                        <a href="" style="float: right;">Go on top</a>
+                    </div><br><br><br>
+
+                    <div class="col-lg-8" ><h2>Dance Night</h2><br>
+                        <p>This is a fun and great way to showcase local talent while raising money for a charity or cause at the same time. Choosing a location, such as a restaurant or bar that usually has live music, is a good option seeing as all the equipment is already there. The venue chosen will have food and drinks, so no need to worry about catering the event. Try and find an owner that has an attachment or sympathizes with your cause so they will either donate or charge a reduced fee for renting, food and beverages. Just as with the movie or karaoke night fundraiser, it is a good idea to choose a quiet night so that they will be more motivated to help you raise money for your charity. Seeing as you are providing the bar or restaurant with a lot of business, part of the proceeds from food and beverages purchased can go to support the cause. With a free MyEvent.com website, bands can easily register to perform online. Guests will be able to learn about the performing bands and purchase their Battle of the Bands Fundraising fundraiser tickets online from the same free website. You can sell tickets online in advance, or charge more at the door, where all proceeds are donated to the cause. Promoting through YouTube and Facebook is a great way to build awareness about the fundraising event. The winning band will win a prize. Sponsorships opportunities and packages can also be featured and purchased on your free MyEvent.com website.</p>
+                        <a href="" style="float: right;">Go on top</a>
+                    </div><br><br><br>
+                </div>
+                <hr>
+            </div>
+        </section>
+
+        <section id="footer">
+            <div class="touch footer">
+                <h3>GET IN TOUCH WITH US</h3>
+                <form class="form ">
+                    <div class="row">
+                        <div class="col-lg-4 form-group">
+                            <input type="name" class="form-control" placeholder="Your Name">
+                        </div>
+                        <div class="col-lg-4 form-group">
+                            <input type="email" class="form-control" placeholder="Your Email">
+                        </div>
+                        <div class="col-lg-4 form-group">
+                            <input type="text" class="form-control" placeholder="Subject">
+                        </div>
+                        <div class="col-lg-12 form-group">
+                            <textarea name="" class="form-control" placeholder="Your message" id="" cols="30" rows="5"></textarea>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline-success btn-lg">SUBMIT</button>
+                </form>
+            </div>
+
+            <div class="container-fluid footer">
+                <a href=""><i class="footer-icon fab fa-twitter " aria-hidden="true"></i></a>
+                <a href=""><i class="footer-icon fab fa-facebook-f" aria-hidden="true"></i></a>
+                <a href=""><i class="footer-icon fab fa-instagram" aria-hidden="true"></i></a>
+                <a href=""><i class="footer-icon fas fa-envelope" aria-hidden="true"></i></a>
+            </div>
+        </section> 
+
+
+    </body>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</html>
